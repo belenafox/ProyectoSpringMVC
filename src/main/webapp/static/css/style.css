@@ -59,6 +59,14 @@ body {
 }
 
 /* main */
+.container-capacitaciones,
+.container-listarCapacitaciones,
+.main-inicio,
+.container-crearCapacitacion,
+.container-contacto {
+	min-height: calc(100vh - 30vh);
+	height: 100%;
+}
 .main-inicio {
 	padding: 0!important;
 }
@@ -116,10 +124,7 @@ body {
 
 /* footer */
 footer {
-	position: absolute;
 	width: 100%;
-	left: 0;
-	bottom: 0;
 	background: #000;
     padding: 24px 0 10px;
     text-align: center;

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +13,7 @@
 </head>
 <body>
 	<%@ include file="menu.jsp" %>
-	<section>
+	<section class="container-capacitaciones">
 		<div class="container">
 	        <h4 class="titulo-form">Listado de Capacitaciones</h4>
 			<a class="btn btn-dark btn-agregar-capacitacion" href="/ProyectoSpringMVC/crearCapacitacion">Agregar Capacitación</a>
@@ -25,11 +26,15 @@
 	                </tr>
 	            </thead>
 	            <tbody>
-		                <tr>
-		                	<td>1</td>
-	                        <td>Test</td>
-	                        <td>Detalle test</td>
-	                    </tr>
+	            <c:forEach items="${capacitaciones}" var="capacitacion">
+		            <tr>
+	                	<td>${capacitacion.id}</td>
+                        <td>${capacitacion.nombre}</td>
+                        <td>${capacitacion.detalle}</td>
+                    </tr>
+		        </c:forEach>
+		          	
+		                
 	            </tbody>
 	        </table>
 	    </div>

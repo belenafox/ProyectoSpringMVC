@@ -12,7 +12,7 @@
 </head>
 <body>
 	<%@ include file="menu.jsp" %>
-	<main class="container main-forms">
+	<main class="container main-forms container-crearCapacitacion">
         <h4 class="titulo-form">Crear Capacitación</h4>
         <form action="CrearCapacitacion" method="post">
         	<input type="hidden" name="formulario" value="capacitacion">
