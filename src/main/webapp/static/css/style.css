@@ -1,0 +1,186 @@
+@charset "UTF-8";
+/* body */
+body {
+	min-height: 100vh;
+	height: 100%;
+}
+
+/* nav active */
+.link-active {
+	font-weight: 700!important;
+}
+
+/* menu */
+.btn-cerrar-sesion p {
+	margin: 0 0 0 24px;
+    font-weight: 300;
+    padding: 6px 18px;
+	
+}
+
+/* logo */
+.img-logo {
+	width: 200px;
+}
+
+/* login */
+.logo-login-blanco {
+	display: none;
+}
+.main-login {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    margin-top: 100px;
+}
+.form-container-login {
+	width: 400px;
+    height: 500px;
+    background: #000;
+    padding: 40px;
+    border: 1px solid #00000030;
+    color: #fff;
+}
+.form-container-login h3 {
+	margin-bottom: 24px;
+}
+.form-container-img {
+	height: 500px;
+    border: 1px solid #00000030;
+    display: flex;
+    align-items: center;
+}
+.form-container-img .logo {
+	width: 400px;
+}
+.separador-mobile {
+	display: none;
+}
+
+/* main */
+.main-inicio {
+	padding: 0!important;
+}
+.slide-principal {
+	width: 100%;
+	height: 400px;
+	position: relative;
+	background-image: url('http://www.cygservice.cl/images/bg/01.jpg');
+	background-size: cover;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide-principal::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #000;
+	opacity: 0.5;
+}
+.slide-principal h1 {
+	color: #fff;
+	font-size: 50px;
+	z-index: 1;
+}
+.article-main-inicio {
+	padding: 24px 32px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* formularios */
+.titulo-form {
+	margin: 24px 0;
+}
+.form-control-personalizado {
+	margin-bottom: 24px;
+}
+.input-personalizado {
+	background: #f6f7f8!important;
+	border: none!important;
+	border-radius: 3px!important;
+}
+.btn-submit-personalizado {
+	width: 200px;
+}
+
+/* crear capacitacion */
+.btn-agregar-capacitacion {
+	float: right;
+}
+
+/* footer */
+footer {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background: #000;
+    padding: 24px 0 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* mensaje éxito */
+.main-mensaje-exito {
+	background: #0000001f;
+	height: 100vh;
+	padding-top: 5%;
+}
+.mensaje-exito {
+	margin: auto;
+    width: 500px;
+    height: auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 24px 24px;
+    border-radius: 44px;
+}
+
+@media only screen and (max-width: 767px) {
+	.main-login {
+		height: 100vh;
+		margin: 0;
+	}
+	.logo-login-blanco {
+		display: block;
+		width: 250px;
+    	margin: auto;
+	}
+	.form-container-login {
+		height: 100%;
+	}
+	.form-container-img {
+		display: none;
+	}
+  	.slide-principal {
+		height: 250px;
+    	padding: 0 16px;
+	}
+	.slide-principal h1 {
+		font-size: 40px;
+	}
+	.btn-submit-personalizado {
+		width: 100%;
+	}
+	.separador-mobile {
+		display: block;
+	}
+	.btn-cerrar-sesion {
+		flex-direction: column;
+    	align-items: start!important;
+	}
+	.btn-cerrar-sesion p {
+		margin: 0;
+	}
+}
