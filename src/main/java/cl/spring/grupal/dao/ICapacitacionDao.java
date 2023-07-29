@@ -5,6 +5,6 @@ import java.util.List;
 import cl.spring.grupal.modelo.Capacitacion;
 
 public interface ICapacitacionDao {
-	List<Capacitacion> obtenerCapacitaciones();
-	boolean crearCapacitacion(Capacitacion capacitacion);
+	public List<Capacitacion> obtenerCapacitaciones();
+	public boolean crearCapacitacion(Capacitacion capacitacion);
 }

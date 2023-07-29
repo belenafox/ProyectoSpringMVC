@@ -7,15 +7,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import cl.spring.grupal.dao.CapacitacionDao;
+import cl.spring.grupal.dao.ICapacitacionDao;
 import cl.spring.grupal.modelo.Capacitacion;
 
 @Controller
-public class Capacitaciones {
-	private final CapacitacionDao capacitacionDao;
+public class CapacitacionesController {
+	private final ICapacitacionDao capacitacionDao;
 
     @Autowired
-    public Capacitaciones(CapacitacionDao capacitacionDao) {
+    public CapacitacionesController(ICapacitacionDao capacitacionDao) {
+    	super();
         this.capacitacionDao = capacitacionDao;
     }
 
