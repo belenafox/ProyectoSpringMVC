@@ -3,15 +3,20 @@ package cl.spring.grupal.dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
 
 import cl.spring.grupal.modelo.Capacitacion;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Repository;
+
 @Repository
 public class CapacitacionDao implements ICapacitacionDao {
-
+	private static final Logger logger = LogManager.getLogger(CapacitacionDao.class);
+	
 	@Override
 	public List<Capacitacion> obtenerCapacitaciones() {
+		logger.info("Se ejecuta método obtenerCapacitaciones");
 		List<Capacitacion> capacitaciones = new ArrayList<>();
 
         Capacitacion capacitacion1 = new Capacitacion();
@@ -37,8 +42,16 @@ public class CapacitacionDao implements ICapacitacionDao {
 
 	@Override
 	public boolean crearCapacitacion(Capacitacion capacitacion) {
-		// TODO Auto-generated method stub
-		return false;
+		logger.info("Se ejecuta método crearCapacitacion");
+		
+		capacitacion.setDetalle(capacitacion.mostrarDetalle(capacitacion.getLugar(), capacitacion.getHora1(), Capacitacion.formatearFecha(capacitacion.getFecha()), capacitacion.getDuracion()));
+		
+		System.out.println("Creando capacitación:");
+        System.out.println("ID: " + capacitacion.getId());
+        System.out.println("Nombre: " + capacitacion.getNombre());
+        System.out.println("Detalle: " + capacitacion.getDetalle());
+        
+		return true;
 	}
 
 }

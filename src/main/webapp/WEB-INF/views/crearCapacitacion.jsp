@@ -14,7 +14,7 @@
 	<%@ include file="menu.jsp" %>
 	<main class="container main-forms container-crearCapacitacion">
         <h4 class="titulo-form">Crear Capacitación</h4>
-        <form action="CrearCapacitacion" method="post">
+        <form action="crearCapacitacion" method="post">
         	<input type="hidden" name="formulario" value="capacitacion">
             <div class="form-floating form-control-personalizado">
                 <input type="text" id="nombre" name="nombre" class="form-control input-personalizado">
@@ -29,7 +29,7 @@
                 <label for="fecha">Fecha</label>
             </div>
             <div class="form-floating form-control-personalizado">
-                <input type="time" id="hora" name="hora" class="form-control input-personalizado">
+                <input type="time" id="hora" name="hora1" class="form-control input-personalizado">
                 <label for="hora">Hora</label>
             </div>
             <div class="form-floating form-control-personalizado">
