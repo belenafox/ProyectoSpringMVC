@@ -16,6 +16,9 @@
 		          		<a class="nav-link" href="/ProyectoSpringMVC/capacitaciones">Capacitaciones</a>
 		        	</li>
 		        	<li class="nav-item">
+		          		<a class="nav-link" href="/ProyectoSpringMVC/usuarios">Usuarios</a>
+		        	</li>
+		        	<li class="nav-item">
 		          		<a class="nav-link" href="/ProyectoSpringMVC/contacto">Contacto</a>
 		        	</li>
 		     	</ul>

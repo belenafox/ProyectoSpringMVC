@@ -20,4 +20,8 @@
 <property name="jdbcTemplate" ref="jdbcTemplate"></property>
 </bean>
 
+<bean id="usuariodao" class="cl.spring.grupal.dao.UsuarioDao">
+<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+</bean>
+
 </beans>

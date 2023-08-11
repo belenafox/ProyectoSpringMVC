@@ -40,17 +40,13 @@ public class CapacitacionDao implements ICapacitacionDao {
 	}
 
 	@Override
-	public boolean crearCapacitacion(Capacitacion capacitacion) {
+	public int crearCapacitacion(Capacitacion capacitacion) {
 		logger.info("Se ejecuta método crearCapacitacion");
 		
 		capacitacion.setDetalle(capacitacion.mostrarDetalle(capacitacion.getLugar(), capacitacion.getHora1(), Capacitacion.formatearFecha(capacitacion.getFecha()), capacitacion.getDuracion()));
 		
-		System.out.println("Creando capacitación:");
-        System.out.println("ID: " + capacitacion.getId());
-        System.out.println("Nombre: " + capacitacion.getNombre());
-        System.out.println("Detalle: " + capacitacion.getDetalle());
-        
-		return true;
+		String query = "insert into Capacitaciones (nombre, detalle) values (?, ?)";
+	    return jdbcTemplate.update(query, capacitacion.getNombre(), capacitacion.getDetalle());
 	}
 
 }

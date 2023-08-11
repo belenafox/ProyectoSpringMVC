@@ -9,6 +9,6 @@ import cl.spring.grupal.modelo.Capacitacion;
 public interface ICapacitacionDao {
 	void setJdbcTemplate(JdbcTemplate jdbcTemplate);
 	public List<Capacitacion> obtenerCapacitaciones();
-	public boolean crearCapacitacion(Capacitacion capacitacion);
+	public int crearCapacitacion(Capacitacion capacitacion);
 	
 }
